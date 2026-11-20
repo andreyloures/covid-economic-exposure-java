@@ -9,12 +9,12 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Читает строки ресурса, сохраняя их исходный порядок. */
+/** Читает CSV из ресурсов приложения и сохраняет исходный порядок строк. */
 public class ExposureReader {
     private static final Charset CSV_CHARSET = Charset.forName("windows-1252");
     private final String resourceName;
 
-    /** Запоминает путь ресурса внутри classpath, например /Exposure.csv. */
+    /** Сохраняет путь к файлу в ресурсах приложения, например /Exposure.csv. */
     public ExposureReader(String resourceName) {
         if (resourceName == null || resourceName.isBlank()) {
             throw new IllegalArgumentException("Не задан путь к CSV-файлу.");

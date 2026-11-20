@@ -5,7 +5,7 @@ package ru.netology.kirilov;
 public class ExposureParser {
     private static final int COLUMN_COUNT = 22;
 
-    /** Возвращает запись; пустые, служебные и повреждённые строки отклоняет исключением. */
+    /** Возвращает запись; при неверном формате строки выбрасывает исключение. */
     public ExposureRecord parseLine(String line) {
         if (line == null || line.isBlank()) {
             throw new IllegalArgumentException("Пустая строка.");

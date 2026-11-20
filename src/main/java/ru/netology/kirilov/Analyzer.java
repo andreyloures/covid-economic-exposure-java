@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/** Описывает операции анализа без реализации расчётных формул. */
+/** Объявляет доступные операции анализа показателей стран. */
 public interface Analyzer {
     /** Возвращает максимум общего индекса, пропуская отсутствующие значения. */
     double calculateMaximum();
