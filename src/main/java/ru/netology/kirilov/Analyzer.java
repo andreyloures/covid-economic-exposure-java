@@ -19,10 +19,10 @@ public interface Analyzer {
     /** Возвращает страну с наибольшим общим индексом в группе или null. */
     ExposureRecord findMostExposedCountry(String incomeClassification);
 
-    /** Возвращает страны с последним индексом в замкнутом диапазоне. */
+    /** Возвращает страны по диапазону индекса без помощи, ПИИ и продовольственного импорта. */
     List<ExposureRecord> findCountriesInRange(double minimum, double maximum);
 
-    /** Возвращает страны выбранной группы с последним индексом в диапазоне. */
+    /** Возвращает ту же выборку с дополнительным условием по группе дохода. */
     List<ExposureRecord> findCountriesInRange(
             double minimum, double maximum, String incomeClassification);
 

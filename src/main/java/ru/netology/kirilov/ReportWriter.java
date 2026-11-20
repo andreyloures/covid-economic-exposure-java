@@ -14,7 +14,7 @@ import java.util.Map;
 public class ReportWriter {
     private static final String SEPARATOR = "--------------------------------------------------\n";
 
-    /** Возвращает отчёт с результатами анализа и демонстрации CRUD. */
+    /** Возвращает отчёт с показателями стран и результатами операций с записями. */
     public String formatReport(Analyzer analyzer, int recordCount, String crudResult) {
         StringBuilder report = new StringBuilder();
         report.append("Экономическое воздействие COVID\n");
@@ -56,7 +56,7 @@ public class ReportWriter {
         report.append("Найдено стран: ").append(selected.size()).append('\n');
         report.append("Из них LIC: ")
                 .append(analyzer.findCountriesInRange(5.0, 6.0, "LIC").size()).append('\n');
-        report.append("\nДемонстрация CRUD на отдельной учебной записи\n").append(crudResult);
+        report.append("\nПроверка операций с учебной записью (CRUD)\n").append(crudResult);
         report.append("Итоговые показатели рассчитаны после удаления учебной записи.\n");
         return report.toString();
     }

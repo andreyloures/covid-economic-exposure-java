@@ -84,7 +84,7 @@ public class Main {
         boolean deleted = repository.delete(DEMO_COUNTRY);
         result.append("delete: ").append(deleted ? "запись удалена." : "запись не найдена.")
                 .append('\n');
-        result.append("findAll: осталось записей: ")
+        result.append("Число записей после удаления (findAll): ")
                 .append(repository.findAll().size()).append('\n');
         return result.toString();
     }

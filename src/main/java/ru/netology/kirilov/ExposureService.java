@@ -70,7 +70,7 @@ public class ExposureService implements Analyzer {
         return null;
     }
 
-    /** Возвращает страны всех групп с последним индексом в диапазоне, включая границы. */
+    /** Отбирает страны по индексу без помощи, ПИИ и продовольственного импорта. */
     @Override
     public List<ExposureRecord> findCountriesInRange(double minimum, double maximum) {
         return findCountriesInRange(minimum, maximum, null);
